@@ -3,12 +3,12 @@ import math
 
 # Configuración de la página de Streamlit
 st.set_page_config(
-    page_title="Calculadora de Espuma",
+    page_title="Calculadora de espuma",
     page_icon="🧯",
     layout="centered"
 )
 
-# Estilos CSS personalizados para mejorar la visualización en celulares
+# Estilos CSS personalizados para que funcione perfecto en Modo Claro y Modo Oscuro
 st.markdown("""
     <style>
     .main {
@@ -30,20 +30,29 @@ st.markdown("""
         margin: 10px 0px;
         border-left: 5px solid;
     }
+    /* Forzamos que el texto de las cajas sea oscuro para que se lea en celulares con modo oscuro */
     .concentrado {
-        background-color: #ffebee;
-        border-left-color: #c62828;
+        background-color: #ffebee !important;
+        border-left-color: #c62828 !important;
+        color: #2c0e0e !important;
+    }
+    .concentrado h4, .concentrado p, .concentrado b, .concentrado small, .concentrado span {
+        color: #2c0e0e !important;
     }
     .agua {
-        background-color: #e3f2fd;
-        border-left-color: #1565c0;
+        background-color: #e3f2fd !important;
+        border-left-color: #1565c0 !important;
+        color: #0b2240 !important;
+    }
+    .agua h4, .agua p, .agua b, .agua small, .agua span {
+        color: #0b2240 !important;
     }
     </style>
     """, unsafe_allow_html=True)
 
 st.title("🧯 Calculadora de Aplicación de Espuma")
-st.caption("Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica")
-st.write("**Herramienta móvil de toma de decisiones para el cálculo de Aplicación de Espuma Contra Incendios**")
+st.markdown("<p style='text-align: center; font-weight: bold; margin-bottom: 5px;'>Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: gray; font-size: 14px;'>Herramienta móvil de toma de decisiones para el cálculo de Aplicación de Espuma Contra Incendios</p>", unsafe_allow_html=True)
 
 st.divider()
 
@@ -52,7 +61,7 @@ st.subheader("1. Características del Escenario")
 tipo_combustible = st.selectbox(
     "Tipo de Combustible:",
     ["Hidrocarburo", "Solvente Polar"],
-    help="Seleccione el tipo de combustible involucrado en el derrame."
+    help="Seleccione el tipo de combustible de la emergencia."
 )
 
 tipo_derrame = st.selectbox(
@@ -95,7 +104,6 @@ concentrado_pct = float(concentrado_opcion.replace("%", "")) / 100.0
 st.divider()
 
 # ---- CÁLCULOS LOGÍSTICOS ----
-# Tasas de aplicación (GPM/m²) y tiempos mínimos (minutos) según la Tabla de la fuente
 if tipo_combustible == "Hidrocarburo":
     if "menor a 1\"" in tipo_derrame:
         tasa = 1.08  # GPM/m²
@@ -135,7 +143,7 @@ else:
 
     st.markdown(f"""
     <div class="highlight-box concentrado">
-        <h4 style="color: #c62828; margin: 0;">🧪 CONCENTRADO DE ESPUMA REQUERIDO</h4>
+        <h4 style="margin: 0; font-weight: bold;">🧪 CONCENTRADO DE ESPUMA REQUERIDO</h4>
         <p style="margin: 5px 0 0 0; font-size: 18px;">
             <b>{galones_concentrado:.1f} Galones</b> de espumógeno al {concentrado_opcion}
             <br><small>(Caudal de dosificación: {gpm_concentrado:.2f} GPM)</small>
@@ -145,7 +153,7 @@ else:
 
     st.markdown(f"""
     <div class="highlight-box agua">
-        <h4 style="color: #1565c0; margin: 0;">💧 AGUA REQUERIDA</h4>
+        <h4 style="margin: 0; font-weight: bold;">💧 AGUA REQUERIDA</h4>
         <p style="margin: 5px 0 0 0; font-size: 18px;">
             <b>{galones_agua:.1f} Galones</b> de agua de abastecimiento
             <br><small>(Caudal de agua pura: {gpm_agua:.2f} GPM)</small>
