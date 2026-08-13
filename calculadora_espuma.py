@@ -62,7 +62,7 @@ st.title("👨‍🚒 Calculadora de Hidráulica Aplicada")
 # Primera línea: Normal / Regular
 st.markdown("<p style='text-align: center; font-size: 14px; color: gray;'>Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica</p>", unsafe_allow_html=True)
 # Segunda línea: En negrita / Bold
-st.markdown("<p style='text-align: center; font-weight: bold; font-size: 16px;'>Aplicación móvil de toma de decisiones para cálculos de Hidráulica Operativa y Aplicación de Espuma</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-weight: bold; font-size: 16px;'>Aplicación para la toma de decisiones para cálculos de Hidráulica Operativa y Aplicación de Espuma</p>", unsafe_allow_html=True)
 
 st.divider()
 
