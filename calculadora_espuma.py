@@ -51,7 +51,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("🧯 Calculadora de Aplicación de Espuma")
-st.markdown("<p style='text-align: center; font-size: 15px; color: gray;'>Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 14px; color: gray;'>Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica</p>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center; font-weight: bold; font-size: 16px;'>Herramienta móvil de toma de decisiones para el cálculo de Aplicación de Espuma Contra Incendios</p>", unsafe_allow_html=True)
 st.divider()
 
