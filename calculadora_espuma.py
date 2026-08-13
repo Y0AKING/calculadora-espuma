@@ -43,7 +43,7 @@ st.markdown("""
 
 st.title("🧯 Calculadora de Aplicación de Espuma")
 st.caption("Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica")
-st.write("**Herramienta móvil de toma de decisiones para calculo de Aplicación de Espuma**")
+st.write("**Herramienta móvil de toma de decisiones para el cálculo de Aplicación de Espuma en la lucha contra incendios**")
 
 st.divider()
 
