@@ -4,7 +4,7 @@ import math
 # Configuración de la página de Streamlit
 st.set_page_config(
     page_title="Calculadora de Hidráulica",
-    page_icon="🧯",
+    page_icon="👨‍🚒",
     layout="centered"
 )
 
@@ -58,7 +58,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-st.title("🧯 Calculadora de Hidráulica Aplicada")
+st.title("👨‍🚒 Calculadora de Hidráulica Aplicada")
 # Primera línea: Normal / Regular
 st.markdown("<p style='text-align: center; font-size: 14px; color: gray;'>Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica</p>", unsafe_allow_html=True)
 # Segunda línea: En negrita / Bold
