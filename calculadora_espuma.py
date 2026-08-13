@@ -3,7 +3,7 @@ import math
 
 # Configuración de la página de Streamlit
 st.set_page_config(
-    page_title="Calculadora de espuma",
+    page_title="Calculadora de Hidráulica",
     page_icon="🧯",
     layout="centered"
 )
@@ -300,7 +300,7 @@ with tab2:
             st.write(f"**Longitud en centenares de pies (L/100):** {l_factor:.2f}")
             st.write("---")
             st.markdown("""
-            💡 **Recomendaciones para reducir la pérdida por fricción (Manual CGBVP):**
+            💡 **Recomendaciones para reducir la pérdida por fricción:**
             * **Líneas más cortas:** Mantenga los tendidos lo más cortos posible.
             * **Mayor diámetro:** Utilice mangueras más anchas (e.g. 2 ½" o 3") para trayectos largos.
             * **Líneas en paralelo:** Cuando necesite caudales altos, use múltiples líneas (paralelo) para dividir el flujo y bajar drásticamente la fricción.
