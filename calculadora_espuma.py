@@ -3,7 +3,7 @@ import math
 
 # Configuración de la página de Streamlit
 st.set_page_config(
-    page_title="Calculadora de Espuma contra Incendios",
+    page_title="Calculadora de Espuma",
     page_icon="🧯",
     layout="centered"
 )
@@ -42,8 +42,8 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("🧯 Calculadora de Aplicación de Espuma")
-st.caption("Cuerpo General de Bomberos Voluntarios del Perú")
-st.write("Herramienta móvil de toma de decisiones basada en la **Tabla para Cálculo de Aplicación de Espuma** de Edward Freire Gatti.")
+st.caption("Desarrollada por el Teniente Brigadier Joaquín Córdova Obal - Salvadora Ica N° 22 - VI Comandancia Departamental Ica")
+st.write("**Herramienta móvil de toma de decisiones para calculo de Aplicación de Espuma**")
 
 st.divider()
 
